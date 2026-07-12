@@ -134,8 +134,6 @@ flutter run
 3. Добавьте конфигурацию через `flutterfire configure` (создаст `firebase_options.dart`)
 4. Укажите свой ключ **ImgBB API** в конфигурации приложения
 
-> ⚠️ Файлы с ключами (`firebase_options.dart`, `google-services.json`, ключ ImgBB) не должны попадать в публичный репозиторий — добавьте их в `.gitignore`.
-
 ---
 
 ## 🎥 Демонстрация
