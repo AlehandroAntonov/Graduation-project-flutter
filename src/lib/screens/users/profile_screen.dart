@@ -169,7 +169,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
               SizedBox(height: 20),
 
-              // Email (только для чтения)
               Card(
                 child: Padding(
                   padding: EdgeInsets.all(16),

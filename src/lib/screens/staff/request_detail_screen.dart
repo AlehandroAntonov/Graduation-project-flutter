@@ -79,7 +79,7 @@ class _RequestDetailScreenState extends State<RequestDetailScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Priority Card
+            
             Container(
               width: double.infinity,
               padding: const EdgeInsets.all(16),
@@ -144,7 +144,6 @@ class _RequestDetailScreenState extends State<RequestDetailScreen> {
 
             const SizedBox(height: 20),
 
-            // Status Card
             Container(
               width: double.infinity,
               padding: const EdgeInsets.all(16),
@@ -198,7 +197,6 @@ class _RequestDetailScreenState extends State<RequestDetailScreen> {
 
             const SizedBox(height: 20),
 
-            // Request Content
             Card(
               child: Padding(
                 padding: const EdgeInsets.all(16),
@@ -242,7 +240,6 @@ class _RequestDetailScreenState extends State<RequestDetailScreen> {
                     ),
                     const SizedBox(height: 12),
 
-                    // Username
                     Row(
                       children: [
                         CircleAvatar(
@@ -277,7 +274,6 @@ class _RequestDetailScreenState extends State<RequestDetailScreen> {
 
                     const SizedBox(height: 12),
 
-                    // Email
                     Row(
                       children: [
                         CircleAvatar(
@@ -420,7 +416,6 @@ class _RequestDetailScreenState extends State<RequestDetailScreen> {
 
             const SizedBox(height: 20),
 
-            // Time Info
             Card(
               child: Padding(
                 padding: const EdgeInsets.all(16),
