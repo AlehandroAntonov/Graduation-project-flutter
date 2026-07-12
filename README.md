@@ -1,110 +1,163 @@
-# <img width="41" height="41" alt="logo" src="https://github.com/user-attachments/assets/96bc1a48-c17b-48ff-91b3-6e8440cf9c7c" /> Helpdesk Support Request Management
+<div align="center">
 
-A mobile application built with Flutter and Firebase designed to streamline technical support workflows within organizations. This project focuses on efficient request tracking, task assignment, and progress monitoring.
+# 🛠️ HelpDesk Mobile — Приложение для службы технической поддержки
 
-## 📋 Project Overview (Topic 3)
-In organizations, technical support requests are frequently generated and must be carefully tracked to ensure timely resolution. A helpdesk system helps manage requests, assign tasks, and monitor work progress.
+**Кроссплатформенное мобильное приложение для автоматизации сбора, обработки и отслеживания заявок технической поддержки**
 
-### Key Features
-1. **Create Support Requests**: Users can submit tickets including content, priority level (Low, Medium, High), and automatic recording of submission time.
-2. **User Management**: Maintains detailed information for both requesters and technical support staff.
-3. **Task Assignment**: Administrators or managers can assign specific support requests to available staff members.
-4. **Status Tracking**: Real-time monitoring of ticket status: **New** → **In Progress** → **Completed**.
-5. **Progress Updates & History**: Staff can update processing progress and the system maintains a full audit log of status changes.
-6. **Advanced Search**: Easily filter and search for support requests by their current status or by the original requester.
+[![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev)
+[![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev)
+[![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com)
+[![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)](#)
+[![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=apple&logoColor=white)](#)
 
----
+![Architecture](https://img.shields.io/badge/architecture-MVVM-8A2BE2?style=flat-square)
+![Platform](https://img.shields.io/badge/platform-Android%20%7C%20iOS-lightgrey?style=flat-square)
+![Status](https://img.shields.io/badge/status-готово%20к%20внедрению-success?style=flat-square)
 
-## 🛠 Tech Stack
-- **Frontend**: Flutter (Dart SDK)
-- **Backend**: Firebase Authentication (User Identity)
-- **Database**: Cloud Firestore (NoSQL Real-time Database)
-- **Tools**: FlutterFire CLI, Git
+</div>
 
 ---
 
-## 📂 Project Structure
-The project follows a clean architecture to ensure maintainability:
+## 📖 О проекте
 
-- `lib/src/models/`: Data models for Requests, Users, and History logs.
-- `lib/src/services/`: Logic for Firebase Auth and Firestore interactions.
-- `lib/src/screens/`: UI screens (Login, Home, Create Request, Management Dashboard).
-- `lib/src/widgets/`: Reusable UI components like custom cards and status badges.
-- `assets/`: App icons and screenshots.
+**HelpDesk Mobile** — единое кроссплатформенное приложение, которое заменяет разрозненный учёт заявок технической поддержки (звонки, чаты, таблицы) на прозрачную цифровую систему с ролевым доступом и синхронизацией в реальном времени.
 
----
+Проект решает типичные проблемы «ручной» техподдержки: непрозрачность статусов заявок для пользователей, потерю обращений, отсутствие единой очереди у специалистов и невозможность контролировать нагрузку. Все данные хранятся в облаке и мгновенно синхронизируются между устройствами.
 
-## 🗄 Data Model (Cloud Firestore)
-
-### Collection: `users`
-- `uid`: String (Unique identifier from Firebase Auth)
-- `full_name`: String (Display name)
-- `email`: String (User email)
-- `role`: String (`requester`, `staff`, or `admin`)
-
-### Collection: `requests`
-- `request_id`: String (Auto-generated ID)
-- `content`: String (The issue description)
-- `priority`: String (`Low`, `Medium`, `High`)
-- `status`: String (`New`, `In Progress`, `Completed`)
-- `submission_time`: Timestamp (When the ticket was created)
-- `requester_id`: String (Reference to the user who created the ticket)
-- `staff_id`: String (Reference to the assigned staff member)
-- `history`: List<Map> (Audit trail of status changes and notes)
+> Приложение разработано как выпускная квалификационная работа на примере процессов технической поддержки крупной розничной компании и доведено до состояния, готового к внедрению.
 
 ---
 
-## 🚀 Getting Started
-1. **Clone the repository**:
-  ```bash
-  git clone https://github.com/hoangchitrung/helpdesk-support-request-management.git
-  cd helpdesk-support-request-management
-  ```
-2. **Install dependencies**:
-  ```bash
-  flutter pub get
-  ```
-3. **Firebase Configuration**:
-- Run `flutterfire configure` to link your local enviroment with your Firebase project.
-- Ensure `firebase_options.dart` is generated in the `lib` folder
-4. **Run the app**:
-  ```bash
-  fluter run
-  ```
-## 📱 Project Demo
-1. **Register Screen**
+## 📱 Скриншоты
 
-<img width="411" height="863" alt="image" src="https://github.com/user-attachments/assets/3cfb90c8-c410-4978-ab53-9f2917795041" />
+<div align="center">
 
-2. **Login Screen**
+| Авторизация | Список заявок | Создание заявки | Детали заявки | Панель администратора |
+|:---:|:---:|:---:|:---:|:---:|
+| <img src="screens/01_login.png" width="180"/> | <img src="screens/02_requests.png" width="180"/> | <img src="screens/03_create.png" width="180"/> | <img src="screens/04_detail.png" width="180"/> | <img src="screens/05_admin.png" width="180"/> |
 
-<img width="411" height="863" alt="image" src="https://github.com/user-attachments/assets/520f9ea4-00cf-461b-a0ad-2ace0f5248de" />
+</div>
 
-3. **User Home Screen**
+---
 
-<img width="411" height="863" alt="image" src="https://github.com/user-attachments/assets/da476b4b-72a6-43d9-a13d-7b7c8bdb41e5" />
+## ✨ Возможности
 
-4. **Add Request Screen**
+### 👤 Для пользователя
+- 📝 Создание заявки с подробным описанием и прикреплением фотографий
+- 📋 Просмотр списка своих заявок со статусом и датой создания
+- 🔍 Детальная карточка заявки: автор, описание, статус, приоритет
+- 👥 Личный кабинет с редактированием персональных данных (ФИО, должность, кабинет, телефон)
+- 📊 Личная статистика по созданным заявкам
 
-<img width="411" height="863" alt="image" src="https://github.com/user-attachments/assets/8bd9dbdc-afc1-4dd0-bdfc-0b8ca3998f62" />
+### 🧑‍💻 Для сотрудника техподдержки
+- 📥 Единая очередь всех поступивших заявок и заявок «в работе»
+- 🔄 Смена статуса заявки: **Новая → В работе → Закрыта**
+- 💬 Комментарий о выполненной работе при закрытии заявки
 
-5. **Admin Home Screen**
+### 🛡️ Для администратора
+- ⚙️ Изменение приоритета и принудительное назначение исполнителя
+- 👥 Полное управление учётными записями: создание, изменение, удаление
+- 🔐 Полный доступ ко всем функциям системы
 
-<img width="411" height="863" alt="image" src="https://github.com/user-attachments/assets/859b35a9-890a-4999-a23a-7be9a7b6d45f" />
+---
 
-6. **Staff Manage Screen**
+## 🔐 Ролевая модель
 
-<img width="411" height="863" alt="image" src="https://github.com/user-attachments/assets/31ccf97a-2f20-4100-bd81-9538c9620420" />
+Система разграничивает права доступа между тремя ролями:
 
-7. **Requesters Manage Screen**
+| Роль | Права доступа |
+|------|---------------|
+| **Пользователь** | Создание и просмотр собственных заявок, ведение личного кабинета |
+| **Сотрудник техподдержки** | Обработка очереди заявок, смена статусов, комментарии |
+| **Администратор** | Полный контроль: приоритеты, назначение исполнителей, управление аккаунтами |
 
-<img width="411" height="863" alt="image" src="https://github.com/user-attachments/assets/973e5a7a-1f09-4705-8ae0-58a17dc9763d" />
+---
 
-8. **Staff Home Screen**
+## 🏗️ Архитектура
 
-<img width="411" height="863" alt="image" src="https://github.com/user-attachments/assets/adf435f7-3d44-480b-ac85-1dc406eed248" />
+Приложение построено по паттерну **MVVM (Model–View–ViewModel)**, обеспечивающему чёткое разделение ответственности между слоями представления, бизнес-логики и данных.
 
-9. **Requests History Screen**
+```
+┌─────────────────┐     ┌──────────────────┐     ┌─────────────────┐
+│      View       │────▶│    ViewModel     │────▶│      Model      │
+│   (виджеты UI)  │◀────│  (бизнес-логика) │◀────│  (данные, API)  │
+└─────────────────┘     └──────────────────┘     └─────────────────┘
+        ▲                                                  │
+        │            реактивное обновление UI              │
+        └──────────────── StreamBuilder ◀──────────────────┘
+```
 
-<img width="411" height="863" alt="image" src="https://github.com/user-attachments/assets/6938045e-e297-4078-b353-3cb77375eab6" />
+- **View** — экраны и виджеты, реактивно перестраиваются через `StreamBuilder` при изменении данных
+- **ViewModel** — бизнес-логика, независимая от конкретных виджетов (легко тестируется изолированно)
+- **Model** — модели данных и взаимодействие с облачными сервисами
 
+---
+
+## 🧰 Технологический стек
+
+| Компонент | Технология | Назначение |
+|-----------|-----------|------------|
+| **Framework** | Flutter | Единая кодовая база для Android и iOS |
+| **Язык** | Dart | Язык разработки приложения |
+| **Аутентификация** | Firebase Authentication | Безопасный вход и разделение по ролям |
+| **База данных** | Cloud Firestore | NoSQL-хранилище с синхронизацией в реальном времени |
+| **Хостинг изображений** | ImgBB | Хранение фотографий, прикреплённых к заявкам |
+
+**Почему Flutter?** Единый графический движок Skia обеспечивает стабильную производительность (60–120 FPS) и единообразие интерфейса на всех платформах, а одна кодовая база сокращает время и стоимость разработки и упрощает сопровождение.
+
+---
+
+## 🚀 Запуск проекта
+
+### Требования
+- [Flutter SDK](https://docs.flutter.dev/get-started/install) (stable)
+- Аккаунт [Firebase](https://console.firebase.google.com/)
+- API-ключ [ImgBB](https://api.imgbb.com/)
+
+### Установка
+
+```bash
+# 1. Клонировать репозиторий
+git clone https://github.com/AlehandroAntonov/<repository-name>.git
+cd <repository-name>
+
+# 2. Установить зависимости
+flutter pub get
+
+# 3. Настроить Firebase (см. ниже), затем запустить
+flutter run
+```
+
+### Настройка Firebase
+1. Создайте проект в [Firebase Console](https://console.firebase.google.com/)
+2. Включите **Authentication** (Email/Password) и **Cloud Firestore**
+3. Добавьте конфигурацию через `flutterfire configure` (создаст `firebase_options.dart`)
+4. Укажите свой ключ **ImgBB API** в конфигурации приложения
+
+> ⚠️ Файлы с ключами (`firebase_options.dart`, `google-services.json`, ключ ImgBB) не должны попадать в публичный репозиторий — добавьте их в `.gitignore`.
+
+---
+
+## 🎥 Демонстрация
+
+Видеодемонстрация работы приложения доступна в репозитории / релизах.
+
+---
+
+## 📊 О разработке
+
+Приложение спроектировано и реализовано полностью самостоятельно: от анализа бизнес-процесса технической поддержки и сравнения существующих решений (Zendesk, Freshdesk, Битрикс24, Мегаплан, Naumen) до проектирования архитектуры, реализации и тестирования. Проведён сравнительный экономический анализ, подтвердивший целесообразность собственной разработки по сравнению с покупкой готового решения.
+
+---
+
+## 👨‍💻 Автор
+
+**Alehandro Antonov** — [@AlehandroAntonov](https://github.com/AlehandroAntonov)
+
+---
+
+<div align="center">
+
+⭐ Если проект оказался полезен — поставьте звезду!
+
+</div>
