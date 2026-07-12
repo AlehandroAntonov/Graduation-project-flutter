@@ -30,7 +30,7 @@
 
 ## 📱 Скриншоты
 
-<div align="center">
+<div>
 
 Авторизация 
 <img src="screens/01_login.png" width="180"/>
