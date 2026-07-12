@@ -32,8 +32,12 @@
 
 <div align="center">
 
-| Авторизация |
-| <img src="screens/01_login.png" width="180"/> | <img src="screens/02_requests.png" width="180"/> | <img src="screens/03_create.png" width="180"/> | <img src="screens/04_detail.png" width="180"/> | <img src="screens/05_admin.png" width="180"/> |
+Авторизация 
+<img src="screens/01_login.png" width="180"/> 
+<img src="screens/02_requests.png" width="180"/> 
+<img src="screens/03_create.png" width="180"/> 
+<img src="screens/04_detail.png" width="180"/> 
+<img src="screens/05_admin.png" width="180"/> 
 
 </div>
 
