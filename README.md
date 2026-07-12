@@ -28,6 +28,25 @@
 
 ---
 
+<<<<<<< HEAD
+=======
+## 📱 Скриншоты
+
+<div align = center>
+
+Авторизация 
+- <img src="screens/01_login.png" width="180"/>
+Панель
+- <img src="screens/02_requests.png" width="180"/> 
+- <img src="screens/03_create.png" width="180"/> 
+- <img src="screens/04_detail.png" width="180"/> 
+- <img src="screens/05_admin.png" width="180"/> 
+
+</div>
+
+---
+
+>>>>>>> 081cdecd2dc2e7876b252493a2a67a7299f4e1d8
 ## ✨ Возможности
 
 ### 👤 Для пользователя
@@ -242,3 +261,10 @@ flutter run
 ## 👨‍💻 Автор
 
 [@AlehandroAntonov](https://github.com/AlehandroAntonov)
+<<<<<<< HEAD
+=======
+
+---
+
+</div>
+>>>>>>> 081cdecd2dc2e7876b252493a2a67a7299f4e1d8
