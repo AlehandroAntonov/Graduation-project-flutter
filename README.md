@@ -150,12 +150,8 @@ flutter run
 
 ## 👨‍💻 Автор
 
-**Alehandro Antonov** — [@AlehandroAntonov](https://github.com/AlehandroAntonov)
+[@AlehandroAntonov](https://github.com/AlehandroAntonov)
 
 ---
-
-<div align="center">
-
-⭐ Если проект оказался полезен — поставьте звезду!
 
 </div>
